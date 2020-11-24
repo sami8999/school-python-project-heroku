@@ -1,15 +1,33 @@
 # Import required libraries
 import os
 from random import randint
-
-import plotly.plotly as py
-from plotly.graph_objs import *
-
-import flask
 import dash
-from dash.dependencies import Input, Output, State, Event
 import dash_core_components as dcc
 import dash_html_components as html
+import dash_table
+import numpy as np
+import pandas as pd
+import plotly.graph_objects as go
+import simfin as sf
+from dash.dependencies import Output, Input
+from plotly.subplots import make_subplots
+from simfin.names import *
+from textwrap import dedent
+import dash_daq as daq
+import yfinance as yf
+import datetime
+import pandas_datareader as pdr
+from dateutil.relativedelta import relativedelta
+import plotly.express as px
+from scipy.stats import pearsonr
+from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.preprocessing import RobustScaler
+from sklearn.decomposition import PCA
+from sklearn.cluster import KMeans
+from sklearn import metrics
+import flask
+
 
 
 # Put your Dash code here
